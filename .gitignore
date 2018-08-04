@@ -1,0 +1,6 @@
+env/*
+.idea
+*.pyc
+**/migrations/0*.py
+blog/dev_settings.py
+dev_settings.py

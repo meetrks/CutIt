@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}CutIt- A platform to make url short{% endblock %}
+
+{% block content %}
+<div class="top">
+    <div class="bar white wide padding card">
+        <a href="/" class="bar-item button"><b>CutIt</b></a>
+    </div>
+</div>
+<div class="container">
+    <div class="content">
+        <input type="url" id="long_url" placeholder="enter your url and get short url..." autofocus autocomplete="off">
+        <button id="submit" class="submit">Go!</button>
+        <span id="result"></span>
+        <span id="error"></span>
+    </div>
+</div>
+
+
+{% endblock %}

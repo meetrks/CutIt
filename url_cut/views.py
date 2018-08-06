@@ -22,6 +22,8 @@ class ShortenUrlView(ListAPIView):
 
 
 class EncodeUrl(APIView):
+    throttle_scope = 'encode_url'
+
     def get(self, request):
         url = request.query_params.get('url')
         if not url:

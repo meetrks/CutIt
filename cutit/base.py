@@ -82,7 +82,13 @@ BASE62_LEN = len(BASE62)
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
-    )
+    ),
+    'DEFAULT_THROTTLE_CLASSES': (
+        'rest_framework.throttling.ScopedRateThrottle',
+    ),
+    'DEFAULT_THROTTLE_RATES': {
+        'encode_url': '100/day'
+    }
 }
 
 BASE_URL = "http://cutit.tk/"

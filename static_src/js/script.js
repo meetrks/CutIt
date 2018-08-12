@@ -4,23 +4,39 @@ document.getElementById("long_url").addEventListener("keyup", function(event) {
         document.getElementById("submit").click();
     }
 });
-$('#submit').click(function(){
-    var url = $('#long_url').val();
+document.getElementById('submit').onclick = function(){
+    document.getElementById('msg').style.display = "none";
+    var url = document.getElementById('long_url').value;
     if (!url){
         return
     }
-    $.get("/encode_url?url=" + encodeURIComponent(url))
-        .done(function(data, status){
-            $('#result').empty();
-            $("#error").css("display","none");
-            $("#result").css("display","block");
-            $('#long_url').empty();
-            $('#result').text(data.shortUrl);
-        })
-        .fail(function(data, status, errorThrown){
-            $('#error').empty();
-            $("#result").css("display","none");
-            $("#error").css("display","block");
-            $('#error').text(JSON.parse(data.responseText).detail);
-        })
-})
+    var result_btn = document.getElementById('result');
+    var error_btn = document.getElementById('error');
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        var resp = {
+            detail: "Something went wrong"
+        };
+        if (this.responseText){
+            var resp = JSON.parse(this.responseText);
+        }
+        if (this.readyState == 4 && this.status == 200) {
+            error_btn.style.display = "none";
+            result_btn.style.display = "block";
+            result_btn.value = resp.shortUrl;
+        }else{
+            result_btn.style.display = "none";
+            error_btn.style.display = "block";
+            error_btn.innerHTML = resp.detail;
+        }
+    };
+    xhttp.open("GET", "/encode_url?url=" + encodeURIComponent(url), false);
+    xhttp.send();
+}
+document.getElementById('result').onclick = function(){
+    var text = document.getElementById("result");
+    text.select();
+    document.execCommand("copy");
+    document.getElementById('msg').style.display = "block";
+    document.getElementById('msg').innerHTML = "Text copied on clipboard: " + text.value;
+}

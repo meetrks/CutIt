@@ -65,6 +65,16 @@ input{
 }
 #result{
     padding: 10px;
+    border: 1px solid;
+    background: white;
+    width: 250px;
+    display: none;
+    margin-top: 100px;
+    margin-left: 30%;
+    cursor: pointer;
+}
+#msg{
+    padding: 5px;
     margin-top: 10px;
     border: 1px solid;
     background: white;
@@ -72,6 +82,7 @@ input{
     display:none;
     position: absolute;
     margin-top: 100px;
+    margin-top: 150px;
 }
 #error{
     padding: 10px;

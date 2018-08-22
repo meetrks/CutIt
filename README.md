@@ -10,7 +10,7 @@ Pre Requirements-
 
 Get the source code from git-
 ```
-git clone https://github.com/skrsinghrahul/CutIt.git
+git clone https://github.com/pinges/CutIt.git
 ```
 Create virtual environment and install dependencies-
 ```

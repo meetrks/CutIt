@@ -13,3 +13,4 @@ class ShortenUrl(BaseModel):
     id = models.CharField(max_length=10, primary_key=True)
     expiration = models.CharField(max_length=255, null=True, blank=True)
     long_url = models.TextField()
+    hit_count = models.PositiveIntegerField(default=0)

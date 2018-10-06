@@ -49,6 +49,8 @@ class DecodeUrl(ListAPIView):
     def get(self, request, id):
         try:
             short_obj = ShortenUrl.objects.get(pk=id)
+            short_obj.hit_count += 1
+            short_obj.save()
             return HttpResponseRedirect(short_obj.long_url)
         except Exception as e:
             print(e)

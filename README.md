@@ -1,5 +1,5 @@
 # CutIt
-CutIt is a platform to shorten your URLs. 
+Cutit (<http://cutit.tk/>) is a URL shortening platform. It is a free service. No need to login or register. Just paste your url in box and get the shorten URL to share on internet.
 
 # Installation Guide
 Pre Requirements-

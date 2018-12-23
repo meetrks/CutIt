@@ -43,6 +43,6 @@ Open <http://127.0.0.1:8000> in browser and enjoy!!!
 
 * Add expiry and other features
 
-* Add analitics system
+* Add analytics system
 
 * Add logger

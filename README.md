@@ -35,3 +35,14 @@ Now you are all done. You can run server using-
 python manage.py runserver --settings=cutit.dev_settings
 ```
 Open <http://127.0.0.1:8000> in browser and enjoy!!!
+
+
+### Future Plans
+
+* Add admin dashboard
+
+* Add expiry and other features
+
+* Add analitics system
+
+* Add logger

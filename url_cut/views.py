@@ -18,7 +18,6 @@ class ShortenUrlView(ListAPIView):
         try:
             return render(request, 'index.html')
         except Exception as e:
-            print e
             return render(request, 'error_page.html')
 
 
@@ -53,5 +52,4 @@ class DecodeUrl(ListAPIView):
             short_obj.save()
             return HttpResponseRedirect(short_obj.long_url)
         except Exception as e:
-            print(e)
             return Response({"detail": "Something went wrong"}, status=status.HTTP_400_BAD_REQUEST)

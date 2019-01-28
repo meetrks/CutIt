@@ -5,6 +5,7 @@ chardet==3.0.4
 decorator==4.3.0
 Django==1.11.14
 django-allauth==0.36.0
+django-redis==4.10.0
 django-rest-auth==0.9.3
 djangorestframework==3.8.2
 djangorestframework-jwt==1.11.0
@@ -23,6 +24,7 @@ Pygments==2.2.0
 PyJWT==1.6.4
 python-openid==2.2.5
 pytz==2018.5
+redis==3.0.1
 requests==2.19.1
 requests-oauthlib==1.0.0
 scandir==1.9.0

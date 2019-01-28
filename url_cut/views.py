@@ -1,14 +1,12 @@
-import time
-
 from django.conf import settings as cfg
 from django.core.validators import URLValidator
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.utils.crypto import get_random_string
 from rest_framework import status
 from rest_framework.generics import ListAPIView
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from django.utils.crypto import get_random_string
 
 from .models import ShortenUrl
 

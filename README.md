@@ -3,14 +3,14 @@ Cutit (<http://cutit.tk/>) is a URL shortening platform. It is a free service. N
 
 # Installation Guide
 Pre Requirements-
-- Python >= 2.7
+- Python 3.x
 - git
-- MySql 5.5 or above
+- MySql 5.7 or above
 - virtualenv
 
 Get the source code from git-
 ```
-git clone https://github.com/pingrs/CutIt.git
+git clone https://github.com/pingrs/CutIt.git cutIt
 ```
 Create virtual environment and install dependencies-
 ```
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ```
 Create local settings file-
 ```
-cd CutIt
+cd cutIt
 cp cutit/dev_settings_sample.py cutit/dev_settings.py
 ```
 Change the MySql credentials in cutit/dev_settings.py
